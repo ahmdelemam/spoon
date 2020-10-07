@@ -3,6 +3,7 @@
 RSpec.describe Recipe, type: :model do
   describe 'associations' do
     it { should belong_to(:chef) }
+    it { should have_many(:tags) }
   end
 
   describe 'validations' do
