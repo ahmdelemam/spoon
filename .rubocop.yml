@@ -1,2 +1,11 @@
 Documentation:
   Enabled: false
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/*'

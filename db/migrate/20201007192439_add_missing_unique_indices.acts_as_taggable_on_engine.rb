@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# rubocop:disable all
+
 # This migration comes from acts_as_taggable_on_engine (originally 2)
 if ActiveRecord.gem_version >= Gem::Version.new('5.0')
   class AddMissingUniqueIndices < ActiveRecord::Migration[4.2]; end
@@ -26,4 +26,3 @@ AddMissingUniqueIndices.class_eval do
     add_index ActsAsTaggableOn.taggings_table, %i[taggable_id taggable_type context], name: 'taggings_taggable_context_idx'
   end
 end
-# rubocop:enable all

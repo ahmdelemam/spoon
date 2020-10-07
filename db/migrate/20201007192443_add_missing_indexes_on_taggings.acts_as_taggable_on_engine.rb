@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable all
 # This migration comes from acts_as_taggable_on_engine (originally 6)
 if ActiveRecord.gem_version >= Gem::Version.new('5.0')
   class AddMissingIndexesOnTaggings < ActiveRecord::Migration[4.2]; end
@@ -30,4 +29,3 @@ AddMissingIndexesOnTaggings.class_eval do
     end
   end
 end
-# rubocop:enable all
