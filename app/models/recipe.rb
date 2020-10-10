@@ -3,7 +3,8 @@
 class Recipe < ApplicationRecord
   acts_as_taggable_on :tags
 
-  validates :title, :photo, :description, presence: true
+  validates :title, :image, :description, presence: true
+  validates :contentful_id, presence: true, uniqueness: true
 
   belongs_to :chef
 end

@@ -13,19 +13,23 @@
 ActiveRecord::Schema.define(version: 2020_10_07_192443) do
 
   create_table "chefs", force: :cascade do |t|
+    t.string "contentful_id", null: false
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["contentful_id"], name: "index_chefs_on_contentful_id", unique: true
   end
 
   create_table "recipes", force: :cascade do |t|
+    t.string "contentful_id", null: false
     t.string "title"
     t.integer "chef_id"
-    t.string "photo"
+    t.string "image"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["chef_id"], name: "index_recipes_on_chef_id"
+    t.index ["contentful_id"], name: "index_recipes_on_contentful_id", unique: true
   end
 
   create_table "taggings", force: :cascade do |t|
