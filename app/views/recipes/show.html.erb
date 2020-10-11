@@ -1,0 +1,12 @@
+<br>
+<div class="container">
+  <img class="card-img-top" alt="<%= @recipe.title %>" src="<%= @recipe.image %>" data-holder-rendered="true" style=" width: 100%; display: block;">
+</div>
+<br>
+<div class="container">
+  <h1 class="jumbotron-heading"><%= @recipe.title %></h1>
+  <h6 class="text-muted"><%= @recipe.chef&.name %></h6>
+  <i class="text-muted"><%= @recipe.tags.map(&:name).join(', ') %></i>
+  <p class="lead"><%= @recipe.description %></p>
+</div>
+<br>

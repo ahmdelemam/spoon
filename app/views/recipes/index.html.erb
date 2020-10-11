@@ -1,0 +1,21 @@
+<main role="main">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% @recipes.each do |recipe| %>
+          <div class="col-md-4">
+            <a href="<%= recipe_url(recipe) %>">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" alt="<%= recipe.title %>" src="<%= recipe.image %>" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+              <div class="card-body">
+                <p class="card-text"><%= recipe.title %></p>
+              </div>
+            </div>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="container text-center"><%= paginate @recipes %></div>
+  </div>
+</main>
