@@ -9,3 +9,4 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'bin/*'
+    - 'spec/**/*'

@@ -6,5 +6,5 @@ class Recipe < ApplicationRecord
   validates :title, :image, :description, presence: true
   validates :contentful_id, presence: true, uniqueness: true
 
-  belongs_to :chef
+  belongs_to :chef, optional: true
 end
